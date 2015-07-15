@@ -10,6 +10,7 @@
 		8E54D9051B56E0E9005268F0 /* SwiftUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E54D9041B56E0E9005268F0 /* SwiftUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8E54D90B1B56E0E9005268F0 /* SwiftUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E54D8FF1B56E0E9005268F0 /* SwiftUtilities.framework */; };
 		8E54D9121B56E0E9005268F0 /* SwiftUtilitiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E54D9111B56E0E9005268F0 /* SwiftUtilitiesTests.swift */; };
+		8E54D91C1B56E101005268F0 /* SwiftUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E54D91B1B56E101005268F0 /* SwiftUtilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		8E54D90A1B56E0E9005268F0 /* SwiftUtilitiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUtilitiesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E54D9101B56E0E9005268F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E54D9111B56E0E9005268F0 /* SwiftUtilitiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUtilitiesTests.swift; sourceTree = "<group>"; };
+		8E54D91B1B56E101005268F0 /* SwiftUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUtilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				8E54D9041B56E0E9005268F0 /* SwiftUtilities.h */,
+				8E54D91B1B56E101005268F0 /* SwiftUtilities.swift */,
 				8E54D9021B56E0E9005268F0 /* Supporting Files */,
 			);
 			path = SwiftUtilities;
@@ -163,6 +166,7 @@
 				TargetAttributes = {
 					8E54D8FE1B56E0E9005268F0 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = L9UAMM8S3T;
 					};
 					8E54D9091B56E0E9005268F0 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -209,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E54D91C1B56E101005268F0 /* SwiftUtilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +328,8 @@
 		8E54D9161B56E0E9005268F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -332,12 +339,15 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		8E54D9171B56E0E9005268F0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
